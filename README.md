@@ -43,8 +43,6 @@ Projede, Spotify, YouTube ve Mental Health & Music Relationship verileri kullan�
    - Streamlit ile interaktif arayüz oluşturma
 
 ## 📈 Sonuç ve Öneriler
-![Müzik Türü Tercihi ve Ortalama Depresyon Seviyesi]("türdepresyon.png")
-
 
 ### 🔍 Sonuçlar
 - **Gospel Müzik**: Uykusuzluk ve depresyon seviyelerini düşüren olumlu etkisi vardır.
@@ -70,5 +68,9 @@ Mental Sağlık Durumlarına Göre Müzik Tercihleri:
 - **Dinleme Süreleri**: Müzik öneri sistemleri, dinleme sürelerini de dikkate alarak, belirli türlerin önerilmesi durumunda önerilen süreleri belirtmelidir. Örneğin, Lofi ve Gospel müziği için 4-6 saatlik dinleme süresi önerilebilirken, Video Oyun Müziği için 2 saatten fazla dinlenmemesi gerektiği hatırlatılmalıdır.
 - **Eğitim ve Bilinçlendirme**: Bireylerin müzik türlerinin mental sağlık üzerindeki etkileri hakkında bilinçlendirilmesi önemlidir. Bu sayede, bireyler kendi müzik tercihlerini daha sağlıklı bir şekilde yapabilirler.
 - **Araştırma ve Geliştirme**: Farklı demografik gruplar üzerinde daha fazla çalışma, müzik öneri sistemlerinin etkinliğini artırabilir.
+
+![Müziğin Mental Sağlık Üzerindeki Etkileri](muzigin_mental_sağlik_uzerindeki_etkisi.png)
+![Müzik Türü Tercihi ve Ortalama Depresyon Seviyesi](muzikturleri_depresyonseviyeleri.png)
+![Ortalama Değer](ortalamadeger.png)
 
 ---
