@@ -43,7 +43,7 @@ Projede, Spotify, YouTube ve Mental Health & Music Relationship verileri kullan�
    - Streamlit ile interaktif arayüz oluşturma
 
 ## 📈 Sonuç ve Öneriler
-![Müzik Türü Tercihi ve Ortalama Depresyon Seviyesi]("C:\Users\sseli\Desktop\türdepresyon.png")
+![Müzik Türü Tercihi ve Ortalama Depresyon Seviyesi]("türdepresyon.png")
 
 
 ### 🔍 Sonuçlar
