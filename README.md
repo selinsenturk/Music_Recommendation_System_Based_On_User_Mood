@@ -2,6 +2,7 @@
 # 🎵 Kullanıcı Ruh Haline Göre Müzik Öneri Sistemi
 
 Bu proje, müziğin duygusal ve psikolojik sağlıktaki derin etkisinden yararlanarak, bireyin zihinsel durumuna ve müzik tercihlerine dayalı olarak özel müzik önerileri sunan bir sistem geliştirmektedir.
+![Arayüz](arayüz.png)
 
 ## 📄 Özet
 
