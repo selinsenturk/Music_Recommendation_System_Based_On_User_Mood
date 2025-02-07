@@ -92,10 +92,10 @@ def display_recommendation_text(anxiety_level, depression_level, insomnia_level,
         ]
     }
 
-    for index, recommendation in enumerate([anxiety_level, depression_level, insomnia_level, ocd_level], start=1):
-        if recommendation >= 7:
+    for index, level in enumerate([anxiety_level, depression_level, insomnia_level, ocd_level], start=1):
+        if level >= 7:
             st.markdown(recommendations[index][0])
-        elif recommendation > 4:
+        elif level > 4:
             st.markdown(recommendations[index][1])
         else:
             st.markdown(recommendations[index][2])
