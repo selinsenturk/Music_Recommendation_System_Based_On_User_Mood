@@ -68,35 +68,38 @@ def determine_genre(selected_genres):
 # Ruhsal durum seviyelerine göre öneri cümleleri
 def display_recommendation_text(anxiety_level, depression_level, insomnia_level, ocd_level):
     st.subheader("Ruhsal Durumunuza Göre Öneriler")
-    
-    if anxiety_level > 7:
-        st.markdown("🌿 **Ruh halinizi sakinleştirecek, doğa sesleri ve yumuşak tonlu müzikler öneriyoruz.**")
-    elif anxiety_level > 4:
-        st.markdown("🧘‍♀️ **Kaygınızı hafifletecek hafif tempolu müzikler dinleyebilirsiniz.**")
-    else:
-        st.markdown("🌟 **Düşük anksiyete seviyeniz var. Enerjik ve motive edici müzikler sizin için uygun olabilir.**")
 
-    if depression_level > 7:
-        st.markdown("⚡ **Enerji verecek, pozitif ve neşeli şarkılarla ruh halinizi yükseltin!**")
-    elif depression_level > 4:
-        st.markdown("🚀 **Motivasyon artırıcı, sizi iyi hissettirecek müzikler dinleyebilirsiniz.**")
-    else:
-        st.markdown("😊 **Düşük depresyon seviyeniz var. Neşeli ve eğlenceli müzikler sizin için uygun olabilir.**")
+    recommendations = {
+        1: [
+            "🌿 **Ruh halinizi sakinleştirecek, doğa sesleri ve yumuşak tonlu müzikler öneriyoruz.**",
+            "🧘‍♀️ **Kaygınızı hafifletecek hafif tempolu müzikler dinleyebilirsiniz.**",
+            "🌟 **Düşük anksiyete seviyeniz var. Enerjik ve motive edici müzikler sizin için uygun olabilir.**"
+        ],
+        2: [
+            "⚡ **Enerji verecek, pozitif ve neşeli şarkılarla ruh halinizi yükseltin!**",
+            "🚀 **Motivasyon artırıcı, sizi iyi hissettirecek müzikler dinleyebilirsiniz.**",
+            "😊 **Düşük depresyon seviyeniz var. Neşeli ve eğlenceli müzikler sizin için uygun olabilir.**"
+        ],
+        3: [
+            "😴 **Rahatlatıcı ve uykuya geçişi kolaylaştıracak müzikler öneriyoruz.**",
+            "🌙 **Hafif enstrümantal müzikler ile uyku kalitenizi artırabilirsiniz.**",
+            "🌜 **Düşük uykusuzluk seviyeniz var. Rahatlatıcı ancak enerji veren müzikler sizin için uygun olabilir.**"
+        ],
+        4: [
+            "🌀 **Odaklanmanızı sağlayacak düzenli ritme sahip müzikler öneriyoruz.**",
+            "🎵 **Ruh halinizi dengeleyebilecek akıcı müzikler dinleyebilirsiniz.**",
+            "🎶 **Düşük OKB seviyeniz var. Serbest ve çeşitli müzikler sizin için uygun olabilir.**"
+        ]
+    }
 
-    if insomnia_level > 7:
-        st.markdown("😴 **Rahatlatıcı ve uykuya geçişi kolaylaştıracak müzikler öneriyoruz.**")
-    elif insomnia_level > 4:
-        st.markdown("🌙 **Hafif enstrümantal müzikler ile uyku kalitenizi artırabilirsiniz.**")
-    else:
-        st.markdown("🌜 **Düşük uykusuzluk seviyeniz var. Rahatlatıcı ancak enerji veren müzikler sizin için uygun olabilir.**")
-
-    if ocd_level > 7:
-        st.markdown("🌀 **Odaklanmanızı sağlayacak düzenli ritme sahip müzikler öneriyoruz.**")
-    elif ocd_level > 4:
-        st.markdown("🎵 **Ruh halinizi dengeleyebilecek akıcı müzikler dinleyebilirsiniz.**")
-    else:
-        st.markdown("🎶 **Düşük OKB seviyeniz var. Serbest ve çeşitli müzikler sizin için uygun olabilir.**")
-
+    for index, recommendation in enumerate([anxiety_level, depression_level, insomnia_level, ocd_level], start=1):
+        if recommendation >= 7:
+            st.markdown(recommendations[index][0])
+        elif recommendation > 4:
+            st.markdown(recommendations[index][1])
+        else:
+            st.markdown(recommendations[index][2])
+        
 # Öneri fonksiyonu
 def recommend_music(genre, num_recommendations=10):
     st.subheader("🎧 Önerileriniz Hazırlanıyor...")
